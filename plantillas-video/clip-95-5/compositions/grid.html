@@ -1,0 +1,188 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: var(--ground); font-family: Inter, sans-serif; color: var(--ink); }
+    #g-head { position: absolute; left: 108px; right: 108px; top: 120px; height: 340px; }
+    .g-wipe { position: absolute; left: 0; right: 0; top: 0; }
+    .g-big { font-size: 220px; font-weight: 900; line-height: 0.9; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
+    .g-sub { font-size: 48px; font-weight: 700; line-height: 1.15; color: var(--muted); margin-top: 18px; letter-spacing: -0.01em; }
+    .g-line { font-size: 84px; font-weight: 900; line-height: 1.0; letter-spacing: -0.035em; }
+    #g-grid { position: absolute; left: 226px; top: 500px; width: 628px; height: 628px; }
+    .cell { position: absolute; width: 52px; height: 52px; background: var(--ink); border-radius: 4px; }
+    #g-src { position: absolute; left: 108px; right: 108px; top: 1172px; font-size: 28px; font-weight: 400; color: var(--muted); line-height: 1.3; }
+  </style>
+  <div id="root" data-composition-id="grid" data-width="1080" data-height="1350">
+    <div id="g-count" class="clip" data-start="0" data-duration="7.8" data-track-index="1" style="position:absolute;left:108px;right:108px;top:120px;">
+      <div id="g-count-in">
+        <div id="g-num" class="g-big">100</div>
+        <div class="g-sub">pilotos de IA generativa</div>
+      </div>
+    </div>
+    <div id="g-stat" class="clip" data-start="7.7" data-duration="3.0" data-track-index="2" style="position:absolute;left:108px;right:108px;top:120px;">
+      <div id="g-stat-in">
+        <div class="g-big">95%</div>
+        <div class="g-sub" style="color:var(--ink)">sin impacto medible en el P&amp;L</div>
+      </div>
+    </div>
+    <div id="g-src" class="clip" data-start="7.9" data-duration="2.8" data-track-index="3">
+      <div id="g-src-in">Fuente: MIT NANDA, The GenAI Divide, 2025</div>
+    </div>
+    <div id="g-l1" class="clip" data-start="10.8" data-duration="2.4" data-track-index="4" style="position:absolute;left:108px;right:108px;top:150px;">
+      <div id="g-l1-in" class="g-line">El problema no es el modelo</div>
+    </div>
+    <div id="g-l2" class="clip" data-start="13.2" data-duration="1.8" data-track-index="5" style="position:absolute;left:108px;right:108px;top:150px;">
+      <div id="g-l2-in" class="g-line">Es el orden</div>
+    </div>
+    <div id="g-grid" class="clip" data-start="0" data-duration="15" data-track-index="0" data-layout-allow-overflow>
+      <div class="cell" id="g-c0" style="left:0px;top:0px"></div>
+      <div class="cell" id="g-c1" style="left:64px;top:0px"></div>
+      <div class="cell" id="g-c2" style="left:128px;top:0px"></div>
+      <div class="cell" id="g-c3" style="left:192px;top:0px"></div>
+      <div class="cell" id="g-c4" style="left:256px;top:0px"></div>
+      <div class="cell" id="g-c5" style="left:320px;top:0px"></div>
+      <div class="cell" id="g-c6" style="left:384px;top:0px"></div>
+      <div class="cell" id="g-c7" style="left:448px;top:0px"></div>
+      <div class="cell" id="g-c8" style="left:512px;top:0px"></div>
+      <div class="cell" id="g-c9" style="left:576px;top:0px"></div>
+      <div class="cell" id="g-c10" style="left:0px;top:64px"></div>
+      <div class="cell" id="g-c11" style="left:64px;top:64px"></div>
+      <div class="cell" id="g-c12" style="left:128px;top:64px"></div>
+      <div class="cell" id="g-c13" style="left:192px;top:64px"></div>
+      <div class="cell" id="g-c14" style="left:256px;top:64px"></div>
+      <div class="cell" id="g-c15" style="left:320px;top:64px"></div>
+      <div class="cell" id="g-c16" style="left:384px;top:64px"></div>
+      <div class="cell" id="g-c17" style="left:448px;top:64px"></div>
+      <div class="cell" id="g-c18" style="left:512px;top:64px"></div>
+      <div class="cell" id="g-c19" style="left:576px;top:64px"></div>
+      <div class="cell" id="g-c20" style="left:0px;top:128px"></div>
+      <div class="cell" id="g-c21" style="left:64px;top:128px"></div>
+      <div class="cell" id="g-c22" style="left:128px;top:128px"></div>
+      <div class="cell" id="g-c23" style="left:192px;top:128px"></div>
+      <div class="cell" id="g-c24" style="left:256px;top:128px"></div>
+      <div class="cell" id="g-c25" style="left:320px;top:128px"></div>
+      <div class="cell" id="g-c26" style="left:384px;top:128px"></div>
+      <div class="cell" id="g-c27" style="left:448px;top:128px"></div>
+      <div class="cell" id="g-c28" style="left:512px;top:128px"></div>
+      <div class="cell" id="g-c29" style="left:576px;top:128px"></div>
+      <div class="cell" id="g-c30" style="left:0px;top:192px"></div>
+      <div class="cell" id="g-c31" style="left:64px;top:192px"></div>
+      <div class="cell" id="g-c32" style="left:128px;top:192px"></div>
+      <div class="cell" id="g-c33" style="left:192px;top:192px"></div>
+      <div class="cell" id="g-c34" style="left:256px;top:192px"></div>
+      <div class="cell" id="g-c35" style="left:320px;top:192px"></div>
+      <div class="cell" id="g-c36" style="left:384px;top:192px"></div>
+      <div class="cell" id="g-c37" style="left:448px;top:192px"></div>
+      <div class="cell" id="g-c38" style="left:512px;top:192px"></div>
+      <div class="cell" id="g-c39" style="left:576px;top:192px"></div>
+      <div class="cell" id="g-c40" style="left:0px;top:256px"></div>
+      <div class="cell" id="g-c41" style="left:64px;top:256px"></div>
+      <div class="cell" id="g-c42" style="left:128px;top:256px"></div>
+      <div class="cell" id="g-c43" style="left:192px;top:256px"></div>
+      <div class="cell" id="g-c44" style="left:256px;top:256px"></div>
+      <div class="cell" id="g-c45" style="left:320px;top:256px"></div>
+      <div class="cell" id="g-c46" style="left:384px;top:256px"></div>
+      <div class="cell" id="g-c47" style="left:448px;top:256px"></div>
+      <div class="cell" id="g-c48" style="left:512px;top:256px"></div>
+      <div class="cell" id="g-c49" style="left:576px;top:256px"></div>
+      <div class="cell" id="g-c50" style="left:0px;top:320px"></div>
+      <div class="cell" id="g-c51" style="left:64px;top:320px"></div>
+      <div class="cell" id="g-c52" style="left:128px;top:320px"></div>
+      <div class="cell" id="g-c53" style="left:192px;top:320px"></div>
+      <div class="cell" id="g-c54" style="left:256px;top:320px"></div>
+      <div class="cell" id="g-c55" style="left:320px;top:320px"></div>
+      <div class="cell" id="g-c56" style="left:384px;top:320px"></div>
+      <div class="cell" id="g-c57" style="left:448px;top:320px"></div>
+      <div class="cell" id="g-c58" style="left:512px;top:320px"></div>
+      <div class="cell" id="g-c59" style="left:576px;top:320px"></div>
+      <div class="cell" id="g-c60" style="left:0px;top:384px"></div>
+      <div class="cell" id="g-c61" style="left:64px;top:384px"></div>
+      <div class="cell" id="g-c62" style="left:128px;top:384px"></div>
+      <div class="cell" id="g-c63" style="left:192px;top:384px"></div>
+      <div class="cell" id="g-c64" style="left:256px;top:384px"></div>
+      <div class="cell" id="g-c65" style="left:320px;top:384px"></div>
+      <div class="cell" id="g-c66" style="left:384px;top:384px"></div>
+      <div class="cell" id="g-c67" style="left:448px;top:384px"></div>
+      <div class="cell" id="g-c68" style="left:512px;top:384px"></div>
+      <div class="cell" id="g-c69" style="left:576px;top:384px"></div>
+      <div class="cell" id="g-c70" style="left:0px;top:448px"></div>
+      <div class="cell" id="g-c71" style="left:64px;top:448px"></div>
+      <div class="cell" id="g-c72" style="left:128px;top:448px"></div>
+      <div class="cell" id="g-c73" style="left:192px;top:448px"></div>
+      <div class="cell" id="g-c74" style="left:256px;top:448px"></div>
+      <div class="cell" id="g-c75" style="left:320px;top:448px"></div>
+      <div class="cell" id="g-c76" style="left:384px;top:448px"></div>
+      <div class="cell" id="g-c77" style="left:448px;top:448px"></div>
+      <div class="cell" id="g-c78" style="left:512px;top:448px"></div>
+      <div class="cell" id="g-c79" style="left:576px;top:448px"></div>
+      <div class="cell" id="g-c80" style="left:0px;top:512px"></div>
+      <div class="cell" id="g-c81" style="left:64px;top:512px"></div>
+      <div class="cell" id="g-c82" style="left:128px;top:512px"></div>
+      <div class="cell" id="g-c83" style="left:192px;top:512px"></div>
+      <div class="cell" id="g-c84" style="left:256px;top:512px"></div>
+      <div class="cell" id="g-c85" style="left:320px;top:512px"></div>
+      <div class="cell" id="g-c86" style="left:384px;top:512px"></div>
+      <div class="cell" id="g-c87" style="left:448px;top:512px"></div>
+      <div class="cell" id="g-c88" style="left:512px;top:512px"></div>
+      <div class="cell" id="g-c89" style="left:576px;top:512px"></div>
+      <div class="cell" id="g-c90" style="left:0px;top:576px"></div>
+      <div class="cell" id="g-c91" style="left:64px;top:576px"></div>
+      <div class="cell" id="g-c92" style="left:128px;top:576px"></div>
+      <div class="cell" id="g-c93" style="left:192px;top:576px"></div>
+      <div class="cell" id="g-c94" style="left:256px;top:576px"></div>
+      <div class="cell" id="g-c95" style="left:320px;top:576px"></div>
+      <div class="cell" id="g-c96" style="left:384px;top:576px"></div>
+      <div class="cell" id="g-c97" style="left:448px;top:576px"></div>
+      <div class="cell" id="g-c98" style="left:512px;top:576px"></div>
+      <div class="cell" id="g-c99" style="left:576px;top:576px"></div>
+    </div>
+  </div>
+  <script>
+    const OFF = [18,40,7,55,87,56,67,60,90,45,97,14,46,11,0,10,30,49,98,71,68,36,27,79,29,25,13,57,9,76,16,34,83,26,21,84,22,66,75,1,73,47,44,38,99,24,12,19,62,4,82,65,91,72,6,70,43,5,95,15,52,42,59,89,96,74,94,20,63,8,69,88,92,54,33,53,51,35,17,2,80,48,28,78,32,81,3,85,50,61,39,41,77,93,31];
+    const SURV = [23,37,58,64,86];
+    const T0 = 2.4, SPAN = 5.2;
+    const offAt = OFF.map((_, i) => T0 + SPAN * Math.sqrt((i + 1) / OFF.length) - SPAN / Math.sqrt(OFF.length) * 0.5);
+    const tl = gsap.timeline({ paused: true });
+    const wipe = (sel, t, d = 0.35) => tl.fromTo(sel, { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: d, ease: "power3.out" }, t);
+    const wipeOut = (sel, t) => tl.to(sel, { clipPath: "inset(0% 0% 0% 100%)", duration: 0.25, ease: "power2.in" }, t);
+
+    // frame 0 is the thumbnail: everything on; the board settles in while the line holds
+    tl.fromTo("#g-grid", { scale: 0.96 }, { scale: 1, duration: 2.4, ease: "power2.out" }, 0);
+
+    // 95 pilots switch off, accelerating
+    OFF.forEach((n, i) => tl.fromTo("#g-c" + n, { backgroundColor: "#121212" }, { backgroundColor: "#D6D5CE", duration: 0.12, ease: "none" }, offAt[i]));
+    const num = document.getElementById("g-num");
+    const proxy = { t: 0 };
+    tl.fromTo(proxy, { t: 0 }, { t: 1, duration: 0.01 + T0 + SPAN + 0.2, ease: "none", onUpdate: () => {
+      const now = proxy.t * (T0 + SPAN + 0.2);
+      let c = 100; for (const a of offAt) if (a <= now) c--;
+      num.textContent = String(c);
+    } }, 0);
+
+    wipeOut("#g-count-in", 7.45);
+    wipe("#g-stat-in", 7.7, 0.4);
+    wipe("#g-src-in", 7.95);
+    wipeOut("#g-stat-in", 10.35);
+    wipeOut("#g-src-in", 10.35);
+
+    // the five survivors turn green
+    SURV.forEach((n, i) => {
+      tl.fromTo("#g-c" + n, { backgroundColor: "#121212" }, { backgroundColor: "#0B8A5F", duration: 0.15, ease: "none" }, 10.6 + i * 0.05);
+      tl.fromTo("#g-c" + n, { scale: 1 }, { keyframes: [{ scale: 1.3, duration: 0.14, ease: "power2.out" }, { scale: 1, duration: 0.2, ease: "power2.inOut" }] }, 10.6 + i * 0.05);
+    });
+    OFF.forEach(n => tl.fromTo("#g-c" + n, { opacity: 1 }, { opacity: 0.45, duration: 0.4, ease: "power1.out" }, 10.6));
+    wipe("#g-l1-in", 10.8, 0.4);
+    wipeOut("#g-l1-in", 13.0);
+    wipe("#g-l2-in", 13.2, 0.35);
+
+    // survivors travel to the column the next scene starts from
+    OFF.forEach(n => tl.to("#g-c" + n, { opacity: 0, duration: 0.35, ease: "power1.in" }, 13.35));
+    tl.to("#g-grid", { scale: 1, duration: 0.01 }, 13.3);
+    SURV.forEach((n, k) => {
+      const c = n % 10, r = Math.floor(n / 10);
+      const cx = 226 + c * 64 + 26, cy = 500 + r * 64 + 26;
+      const tx = 205, ty = 395 + 140 * k;
+      tl.to("#g-c" + n, { x: tx - cx, y: ty - cy, scale: 110 / 52, borderRadius: 4, duration: 0.9, ease: "power3.inOut" }, 13.45 + k * 0.05);
+    });
+    wipeOut("#g-l2-in", 14.65);
+    window.__timelines["grid"] = tl;
+  </script>
+</template>

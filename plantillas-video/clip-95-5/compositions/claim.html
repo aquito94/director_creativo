@@ -1,0 +1,16 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: var(--ground); font-family: Inter, sans-serif; color: var(--ink); }
+    .c-line { position: absolute; left: 108px; right: 108px; font-size: 112px; font-weight: 900; letter-spacing: -0.04em; line-height: 1.0; }
+  </style>
+  <div id="root" data-composition-id="claim" data-width="1080" data-height="1350">
+    <div id="c-l1" class="clip c-line" data-start="0" data-duration="2.4" data-track-index="0" style="top:470px"><div id="c-l1-in">Primero el costo</div></div>
+    <div id="c-l2" class="clip c-line" data-start="0" data-duration="2.4" data-track-index="1" style="top:620px"><div id="c-l2-in">Después, <span style="color:var(--accent)">la IA</span></div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#c-l1-in", { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.4, ease: "power3.out" }, 0.05);
+    tl.fromTo("#c-l2-in", { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.4, ease: "power3.out" }, 0.75);
+    window.__timelines["claim"] = tl;
+  </script>
+</template>
